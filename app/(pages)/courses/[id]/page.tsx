@@ -1,37 +1,18 @@
 // Course Page
-'use client';
-
 import React from 'react'
-import { Link, Divider, Spinner } from '@nextui-org/react'
+import { Link, Divider } from '@nextui-org/react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-import { fetchCourseDetail } from '@/api/data';
 import LecturesList from '@/components/LecturesList'
-import PageSpinner from '@/components/PageSpinner';
 
-export default function Course({ params }: { params: { id: string } }) {
-  const [isLoading, setIsLoading] = React.useState(true)
-  const [data, setData] = React.useState({
-    id: '',
-    title: '',
-    duration: 0,
-    video: '',
-    description: '',
-    lectures: []
-  });
+async function fetchCourseDetail(id: string) {
+  const res = await fetch(`https://febc-final-project-api--pathompongthiti.repl.co/courses/${id}`)
+  if (!res.ok) throw new Error(res.statusText)
+  return res.json()
+}
 
-  React.useEffect(() => {
-    fetchCourseDetail(params.id)
-      .then((data) => {
-        setData(data)
-        setIsLoading(false)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }, [params.id]);
-
-  if (isLoading) return <PageSpinner />
+export default async function Course({ params }: { params: { id: string } }) {
+  const data = await fetchCourseDetail(params.id)
 
   return (
     <>

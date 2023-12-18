@@ -1,29 +1,15 @@
 // Lesson Page
-'use client';
-
 import React from 'react'
 
-import { fetchLectures } from '@/api/data';
-import PageSpinner from '@/components/PageSpinner';
+async function fetchLectures(id: string) {
+    const res = await fetch(`https://febc-final-project-api--pathompongthiti.repl.co/courses/${id}`)
+    if (!res.ok) throw new Error(res.statusText)
+    const data = await res.json()
+    return data.lectures
+}
 
-export default function Lesson({ params }: { params: { id: string } }) {
-    const [isLoading, setIsLoading] = React.useState(true)
-    const [lectures, setLectures] = React.useState([])
-    const [currentLectureId, setCurrentLectureId] = React.useState(0)
-
-    React.useEffect(() => {
-        fetchLectures(params.id)
-            .then((data) => {
-                setLectures(data.lectures)
-                setIsLoading(false)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }, [params.id]);
-
-
-    if (isLoading) return <PageSpinner />
+export default async function Lesson({ params }: { params: { id: string } }) {
+    const lectures = await fetchLectures(params.id)
 
     return (
         <div>

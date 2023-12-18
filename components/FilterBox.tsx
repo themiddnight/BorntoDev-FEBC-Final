@@ -1,12 +1,21 @@
+'use client'
+
 import React from "react";
 import { Select, SelectItem } from "@nextui-org/react";
 
-type Props = {
-  list: string[];
-  onChangeFunc: (value: string) => void;
-};
+function redirect(category: string) {
+  if (category === 'All') {
+    window.location.href = '/courses';
+  } else {
+    let categoryUrl = category.replace(/\s/g, '%20')
+    window.location.href = `/courses/category/${categoryUrl}`;
+  }
+}
 
-export default function FilterBox(props: Props) {
+export default function FilterBox({ list, selectedKey }: { list: string[], selectedKey: string }) {
+  list.sort()
+  var categories = ['All', ...list]
+
   return (
     <div className="flex gap-2 align-bottom my-5">
       <Select
@@ -15,9 +24,10 @@ export default function FilterBox(props: Props) {
         isMultiline={true}
         placeholder="All"
         className="w-full sm:w-80 "
-        onChange={(e) => props.onChangeFunc(e.target.value)}
+        selectedKeys={[selectedKey]}
+        onChange={(e) => redirect(e.target.value)}
       >
-        {props.list.map((category: string) => (
+        {categories.map((category: string) => (
           <SelectItem key={category}>
             {category}
           </SelectItem>
