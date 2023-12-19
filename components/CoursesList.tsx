@@ -20,7 +20,7 @@ interface Course {
 
 // Fetch categories from API to use in FilterBox
 async function fetchCategories() {
-	const res = await fetch('https://febc-final-project-api--pathompongthiti.repl.co/categories')
+	const res = await fetch('https://febc-final-project-api--pathompongthiti.repl.co/categories', { cache: 'no-store' })
 	if (!res.ok) throw new Error(res.statusText)
 	return res.json()
 }
@@ -32,7 +32,7 @@ export default async function CoursesList({ coursesList, selectedCategory }: Pro
 	return (
 		<>
 			<p className='font-sans text-white/50'>Our developer courses:</p>
-			<Typewrite texts={[categoryTitle]} className='sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono py-5 text-amber-300' />
+			<Typewrite texts={[categoryTitle]} className='text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono py-5 text-amber-300' />
 			<FilterBox list={categories} selectedKey={selectedCategory} />
 			<div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{coursesList.map((course) => (

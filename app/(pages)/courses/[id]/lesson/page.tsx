@@ -3,7 +3,7 @@ import NotFound from '@/components/NotFound'
 import React from 'react'
 
 async function fetchLectures(id: string) {
-    const res = await fetch(`https://febc-final-project-api--pathompongthiti.repl.co/courses/${id}`)
+    const res = await fetch(`https://febc-final-project-api--pathompongthiti.repl.co/courses/${id}`, { cache: 'no-store' })
     if (!res.ok) return null
     const data = await res.json()
     return data.lectures

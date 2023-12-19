@@ -4,7 +4,7 @@ import React from 'react'
 import CoursesList from '@/components/CoursesList'
 
 async function fetchCourses() {
-  const res = await fetch('https://febc-final-project-api--pathompongthiti.repl.co/courses')
+  const res = await fetch('https://febc-final-project-api--pathompongthiti.repl.co/courses', { cache: 'no-store' })
   if (!res.ok) return null
   return res.json()
 }

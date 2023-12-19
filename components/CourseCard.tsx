@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, Link, Image } from '@nextui-org/react'
+import Typewrite from './Typewrite'
 
 type Props = {
 	id: string,
@@ -21,7 +22,8 @@ export default function CourseCard(props: Props) {
 					</Link>
 				</CardHeader>
 				<CardBody className='p-5 flex flex-col'>
-					<small className={`text-secondary font-mono`}>{props.category}</small>
+					{/* <small className={`text-secondary font-mono`}>{props.category}</small> */}
+					<Typewrite texts={[props.category.replaceAll(' ', '_')]} cursor={false} className={`text-secondary font-mono text-sm`} />
 					<Link href={`/courses/${props.id}`} color='foreground'>
 						<p className={`text-primary text-xl font-bold my-3 flex-auto`}>{props.title}</p>
 					</Link>

@@ -8,7 +8,7 @@ import NotFound from '@/components/NotFound';
 import Typewrite from '@/components/Typewrite';
 
 async function fetchCourseDetail(id: string) {
-  const res = await fetch(`https://febc-final-project-api--pathompongthiti.repl.co/courses/${id}`)
+  const res = await fetch(`https://febc-final-project-api--pathompongthiti.repl.co/courses/${id}`, { cache: 'no-store' })
   if (!res.ok) return null
   return res.json()
 }

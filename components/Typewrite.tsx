@@ -5,15 +5,17 @@ type Props = {
 	texts: string[]
 	speed?: number
 	interval?: number
+	cursor?: boolean
 	className?: string
 }
 
-export default function Typewrite({ texts, speed = 50, interval = 3000, className }: Props) {
+export default function Typewrite({ texts, speed = 50, interval = 3000, cursor = true, className }: Props) {
 	const [text, setText] = useState('')
-	const [underline, setUnderline] = useState('_')
+	const [underline, setUnderline] = useState('')
 	const [isTyping, setIsTyping] = useState(true)
 
 	useEffect(() => {
+		if (!cursor) return
 		if (isTyping) {
 			setUnderline('_')
 		} else {
