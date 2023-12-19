@@ -26,14 +26,13 @@ async function fetchCategories() {
 }
 
 export default async function CoursesList({ coursesList, selectedCategory }: Props) {
-	console.log(coursesList)
 	const categories = await fetchCategories()
 	const categoryTitle = selectedCategory.replaceAll(' ', '_').toUpperCase()
 
 	return (
 		<>
 			<p className='font-sans text-white/50'>Our developer courses:</p>
-			<Typewrite texts={['Hello, world!',categoryTitle]} className='sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono py-5 text-amber-300' />
+			<Typewrite texts={[categoryTitle]} className='sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono py-5 text-amber-300' />
 			<FilterBox list={categories} selectedKey={selectedCategory} />
 			<div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{coursesList.map((course) => (

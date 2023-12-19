@@ -15,6 +15,8 @@ export default async function Courses() {
   if (!courses) return null
 
   return (
-    <CoursesList coursesList={courses} selectedCategory='All' />
+    <>
+      <CoursesList coursesList={courses} selectedCategory='All' />
+    </>
   )
 }

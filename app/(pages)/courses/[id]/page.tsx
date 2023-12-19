@@ -5,6 +5,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 import LecturesList from '@/components/LecturesList'
 import NotFound from '@/components/NotFound';
+import Typewrite from '@/components/Typewrite';
 
 async function fetchCourseDetail(id: string) {
   const res = await fetch(`https://febc-final-project-api--pathompongthiti.repl.co/courses/${id}`)
@@ -25,7 +26,7 @@ export default async function Course({ params }: { params: { id: string } }) {
           <Link href={`/courses/${data.id}/lesson`} className='mx-auto'>Go to lesson <OpenInNewIcon className='ms-1' /></Link>
         </div>
         <div className='flex-1'>
-          <p className={`text-secondary font-mono`}>{data.category}</p>
+          <Typewrite texts={[data.category.replaceAll(' ', '_')]}  className={`text-secondary font-mono`} />
           <h1 className={`text-3xl text-primary font-bold my-5`}>{data.title}</h1>
           <p>{data.description}</p>
           <Divider className='my-7' />
