@@ -11,13 +11,13 @@ export default function Footer() {
 						<p className='font-bold text-lg'>About</p>
 						<p className='text-sm'>This is a project for BorntoDev Front-End Bootcamp.</p>
 						<p className='text-sm'>Built with Next.js, TailwindCSS, and NextUI.</p>
-						<p className='text-sm'><a href='https://replit.com/@PathompongThiti/FEBC-Final-Project-API' target='blank' className='text-blue-500/75'>Using Flask as an API</a></p>
+						<p className='text-sm'><a href='https://replit.com/@PathompongThiti/FEBC-Final-Project-API' target='blank' className='text-white/75 underline'>Using Flask as an API</a></p>
 					</div>
 					<div className='flex flex-col'>
 						<p className='font-bold text-lg'>Contact</p>
 						<p className='text-sm'>Pathompong Thitithan</p>
-						<p className='text-sm'>Email: <a href='mailto:the.midnight.k.0173@gmail.com' className='text-blue-500/75'>the.midnight.k.0173@gmail.com</a></p>
-						<p className='text-sm'>GitHub: <a href='https://github.com/themiddnight' target='blank' className='text-blue-500/75'>themiddnight</a></p>
+						<p className='text-sm'>Email: <a href='mailto:the.midnight.k.0173@gmail.com' className='text-white/75 underline'>the.midnight.k.0173@gmail.com</a></p>
+						<p className='text-sm'>GitHub: <a href='https://github.com/themiddnight' target='blank' className='text-white/75 underline'>themiddnight</a></p>
 					</div>
 				</div>
 			</div>

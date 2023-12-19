@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
-    background-image: radial-gradient(ellipse at top, #1b2735 0%, #000000 90%);
+    background-image: radial-gradient(ellipse at top, #302050 0%, #090011 90%);
+    background-color: #101;
     background-attachment: fixed;
 }

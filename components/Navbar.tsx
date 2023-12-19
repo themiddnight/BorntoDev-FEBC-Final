@@ -23,10 +23,12 @@ export default function MainNavbar() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand className="grow-0 me-5">
-          <TerminalIcon className="me-3" />
-          <p className="font-bold text-inherit">FINALE_PROJECT</p>
-        </NavbarBrand>
+        <Link href="/">
+          <NavbarBrand className="grow-0 me-5">
+            <TerminalIcon className="me-2 text-lime-400" />
+            <p className="font-bold font-mono text-rose-500">FINALE_PROJECT</p>
+          </NavbarBrand>
+        </Link>
 
         <NavbarContent className="hidden sm:flex gap-4" justify="start">
           {menuItems.map((item, index) => (

@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { nextui } from "@nextui-org/react"
+import { amber } from '@mui/material/colors'
 
 const config: Config = {
   content: [
@@ -24,18 +25,15 @@ const config: Config = {
   },
   plugins: [nextui({
     themes: {
-      // dark: {
-      //   colors: {
-      //     foreground: '#dddddd',
-      //     background: '#111111',
-      //   }
-      // },
-      // light: {
-      //   colors: {
-      //     foreground: '#222222',
-      //     background: '#eeeeee',
-      //   }
-      // },
+      dark: {
+        colors: {
+          foreground: '#dddddd',
+          background: '#111111',
+          primary: amber[500],
+          secondary: '#76e',
+          content1: '#101',
+        }
+      },
     }
   })],
 }

@@ -23,7 +23,7 @@ export default function FilterBox({ list, selectedKey }: { list: string[], selec
         labelPlacement="outside"
         isMultiline={true}
         placeholder="All"
-        className="w-full sm:w-80 "
+        className="w-full sm:w-80 shadow-lg"
         selectedKeys={[selectedKey]}
         onChange={(e) => redirect(e.target.value)}
       >

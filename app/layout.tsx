@@ -5,7 +5,6 @@ import './globals.css'
 
 import MainNavbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { StyledBody } from '@/style/styledComponents'
 
 export const metadata: Metadata = {
   title: "Ake's FEBC Finale Project",
@@ -18,8 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#110011" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      {/* <StyledBody> */}
       <body>
         <Providers>
           <MainNavbar />
@@ -29,7 +29,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </Providers>
       </body>
-      {/* </StyledBody> */}
     </html>
   )
 }
