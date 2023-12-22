@@ -23,9 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Providers>
           <MainNavbar />
-          <div className="container py-10 px-5">
+          <main className="container my-10 px-5">
             {children}
-          </div>
+          </main>
           <Footer />
         </Providers>
       </body>

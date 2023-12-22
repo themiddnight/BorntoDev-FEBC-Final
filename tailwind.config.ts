@@ -34,6 +34,15 @@ const config: Config = {
           content1: '#101',
         }
       },
+      light: {
+        colors: {
+          foreground: '#111111',
+          background: '#dddddd',
+          primary: amber[900],
+          secondary: '#76e',
+          content1: '#fff',
+        }
+      }
     }
   })],
 }

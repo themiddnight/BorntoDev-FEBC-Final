@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardHeader, CardBody, Link, Image } from '@nextui-org/react'
 import Typewrite from './Typewrite'
 
-type Props = {
+interface Props {
 	id: string,
 	title: string,
 	description: string,
@@ -18,12 +18,13 @@ export default function CourseCard(props: Props) {
 			<Card className='flex items-stretch shadow-lg'>
 				<CardHeader className='p-0'>
 					<Link href={`/courses/${props.id}`}>
-						<Image src={props.thumbnail} alt={props.title} className='rounded-none' />
+						<div className='h-48 overflow-hidden'>
+							<Image src={props.thumbnail} alt={props.title} isZoomed radius='none' className='rounded-none' />
+						</div>
 					</Link>
 				</CardHeader>
 				<CardBody className='p-5 flex flex-col'>
-					{/* <small className={`text-secondary font-mono`}>{props.category}</small> */}
-					<Typewrite texts={[props.category.replaceAll(' ', '_')]} cursor={false} className={`text-secondary font-mono text-sm`} />
+					<Typewrite texts={[props.category.replaceAll(' ', '_')]} hasCursor={false} className={`text-secondary font-mono text-sm`} />
 					<Link href={`/courses/${props.id}`} color='foreground'>
 						<p className={`text-primary text-xl font-bold my-3 flex-auto`}>{props.title}</p>
 					</Link>

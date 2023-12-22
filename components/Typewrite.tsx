@@ -1,47 +1,87 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 import { useState, useEffect } from 'react'
 
-type Props = {
-	texts: string[]
+interface Props {
+	texts: Array<string>
+	startText?: string
+	cursorText?: string
 	speed?: number
 	interval?: number
-	cursor?: boolean
+	pretype?: number
+	hasCursor?: boolean
+	loop?: boolean
 	className?: string
 }
 
-export default function Typewrite({ texts, speed = 50, interval = 3000, cursor = true, className }: Props) {
+export default function Typewrite({
+	texts,
+	startText = '',
+	cursorText = '_',
+	speed = 50,
+	interval = 3000,
+	pretype = 0,
+	hasCursor = true,
+	loop = false,
+	className }: Props) {
+
 	const [text, setText] = useState('')
-	const [underline, setUnderline] = useState('')
+	const [cursor, setCursor] = useState('')
 	const [isTyping, setIsTyping] = useState(true)
 
+	// Typewrite function
+	async function typewrite(text: string) {
+		return new Promise<void>(async (resolve) => {
+			setText('');
+			await new Promise<void>((resolve) => {
+				setIsTyping(false)
+				setTimeout(resolve, pretype);
+			});
+			setIsTyping(true)
+			for (let i = 0; i < text.length; i++) {
+				setTimeout(function () {
+					setText((prev) => prev + text[i]);
+				}, speed * i);
+			}
+			setTimeout(function () {
+				setIsTyping(false)
+				resolve();
+			}, speed * text.length);
+		});
+	}
+
+	// Display typewrite
+	async function displayTypewrite() {
+		let i = 0;
+		while (i < texts.length) {
+			await typewrite(texts[i]);
+			await new Promise<void>((resolve) => {
+				setTimeout(resolve, interval);
+			});
+			i++;
+			if (loop && i == texts.length) {
+				i = 0;
+			}
+		}
+	}
+
 	useEffect(() => {
-		if (!cursor) return
+		if (!hasCursor) return
 		if (isTyping) {
-			setUnderline('_')
+			setCursor(cursorText)
 		} else {
 			const interval = setInterval(() => {
-				setUnderline(prev => prev === '_' ? '' : '_')
+				setCursor(prev => prev === cursorText ? ' ' : cursorText)
 			}, 500)
 			return () => clearInterval(interval)
 		}
-	}, [isTyping])
+	}, [hasCursor, isTyping])
 
 	useEffect(() => {
-		for (let i = 0; i < texts.length; i++) {
-			setTimeout(() => {
-				setIsTyping(true)
-				for (let j = 0; j < texts[i].length; j++) {
-					setTimeout(() => {
-						setText(prev => prev + texts[i][j])
-						if (j === texts[i].length - 1) setIsTyping(false)
-					}, speed * j)
-				}
-				setText('')
-			}, interval * i)
-		}
+		displayTypewrite();
 	}, [])
 
 	return (
-		<p className={className}>{text + underline}</p>
+		<p className={className}>{startText + text + cursor}</p>
 	)
 }

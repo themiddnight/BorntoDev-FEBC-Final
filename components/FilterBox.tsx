@@ -1,14 +1,13 @@
 'use client'
 
 import React from "react";
-import { Select, SelectItem } from "@nextui-org/react";
+import { Select, SelectItem } from "@nextui-org/select";
 
 function redirect(category: string) {
   if (category === 'All') {
     window.location.href = '/courses';
   } else {
-    let categoryUrl = category.replace(/\s/g, '%20')
-    window.location.href = `/courses/category/${categoryUrl}`;
+    window.location.href = `/courses/category/${category}`;
   }
 }
 
@@ -17,7 +16,7 @@ export default function FilterBox({ list, selectedKey }: { list: string[], selec
   var categories = ['All', ...list]
 
   return (
-    <div className="flex gap-2 align-bottom my-5">
+    <div className="flex gap-2 mb-7">
       <Select
         label="Category"
         labelPlacement="outside"

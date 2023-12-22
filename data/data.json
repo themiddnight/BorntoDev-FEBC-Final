@@ -6,37 +6,37 @@
       "description": "Learn the fundamentals of Python programming language, including syntax, data types, and control structures.",
       "category": "Programming Fundamentals",
       "categoryId": 1,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=Introduction%20to\n%20Python%20Programming",
+      "thumbnail": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to\n%20Python%20Programming",
       "lectures": [
         {
           "id": 101,
           "title": "Getting Started with Python",
-          "duration": 60,
+          "duration": 533,
           "video": "https://placehold.co/1920x1080.mp4?text=Getting%20Started%20with%20Python"
         },
         {
           "id": 102,
           "title": "Variables and Data Types",
-          "duration": 90,
+          "duration": 510,
           "video": "https://placehold.co/1920x1080.mp4?text=Variables%20and%20Data%20Types"
         },
         {
           "id": 103,
           "title": "Control Flow and Loops",
-          "duration": 120,
+          "duration": 1812,
           "video": "https://placehold.co/1920x1080.mp4?text=Control%20Flow%20and%20Loops"
         },
         {
           "id": 104,
           "title": "Functions and Modules",
-          "duration": 90,
+          "duration": 803,
           "video": "https://placehold.co/1920x1080.mp4?text=Functions%20and%20Modules"
         },
         {
           "id": 105,
           "title": "Working with Lists and Dictionaries",
-          "duration": 120,
+          "duration": 990,
           "video": "https://placehold.co/1920x1080.mp4?text=Working%20with%20Lists%20and%20Dictionaries"
         }
       ]
@@ -47,37 +47,37 @@
       "description": "Explore the basics of web development, focusing on HTML for content structure and CSS for styling.",
       "category": "Web Development",
       "categoryId": 2,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=Web%20Development\n%20with%20HTML%20and%20CSS",
+      "thumbnail": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=Web%20Development\n%20with%20HTML%20and%20CSS",
       "lectures": [
         {
           "id": 201,
           "title": "Introduction to HTML",
-          "duration": 60,
+          "duration": 1578,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20HTML"
         },
         {
           "id": 202,
           "title": "HTML5 and Semantic Elements",
-          "duration": 90,
+          "duration": 974,
           "video": "https://placehold.co/1920x1080.mp4?text=HTML5%20and%20Semantic%20Elements"
         },
         {
           "id": 203,
           "title": "Styling with CSS",
-          "duration": 120,
+          "duration": 1386,
           "video": "https://placehold.co/1920x1080.mp4?text=Styling%20with%20CSS"
         },
         {
           "id": 204,
           "title": "CSS Layouts and Flexbox",
-          "duration": 90,
+          "duration": 1310,
           "video": "https://placehold.co/1920x1080.mp4?text=CSS%20Layouts%20and%20Flexbox"
         },
         {
           "id": 205,
           "title": "Responsive Design",
-          "duration": 120,
+          "duration": 956,
           "video": "https://placehold.co/1920x1080.mp4?text=Responsive%20Design"
         }
       ]
@@ -88,37 +88,37 @@
       "description": "Dive into client-side scripting with JavaScript, covering DOM manipulation and event handling.",
       "category": "Web Development",
       "categoryId": 2,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=JavaScript%20for\n%20Front-End%20Development",
+      "thumbnail": "https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=JavaScript%20for\n%20Front-End%20Development",
       "lectures": [
         {
           "id": 301,
           "title": "Introduction to JavaScript",
-          "duration": 60,
+          "duration": 1732,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20JavaScript"
         },
         {
           "id": 302,
           "title": "DOM Manipulation",
-          "duration": 90,
+          "duration": 1845,
           "video": "https://placehold.co/1920x1080.mp4?text=DOM%20Manipulation"
         },
         {
           "id": 303,
           "title": "Event Handling",
-          "duration": 120,
+          "duration": 895,
           "video": "https://placehold.co/1920x1080.mp4?text=Event%20Handling"
         },
         {
           "id": 304,
           "title": "Asynchronous JavaScript",
-          "duration": 90,
+          "duration": 1470,
           "video": "https://placehold.co/1920x1080.mp4?text=Asynchronous%20JavaScript"
         },
         {
           "id": 305,
           "title": "Introduction to jQuery",
-          "duration": 120,
+          "duration": 1314,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20jQuery"
         }
       ]
@@ -129,37 +129,37 @@
       "description": "Learn data manipulation and analysis using Python, with a focus on the Pandas library.",
       "category": "Data Science",
       "categoryId": 3,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=Data%20Science%20with\n%20Python%20and%20Pandas",
+      "thumbnail": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=Data%20Science%20with\n%20Python%20and%20Pandas",
       "lectures": [
         {
           "id": 401,
           "title": "Introduction to Data Science",
-          "duration": 60,
+          "duration": 1475,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Data%20Science"
         },
         {
           "id": 402,
           "title": "Data Cleaning with Pandas",
-          "duration": 90,
+          "duration": 924,
           "video": "https://placehold.co/1920x1080.mp4?text=Data%20Cleaning%20with%20Pandas"
         },
         {
           "id": 403,
           "title": "Exploratory Data Analysis",
-          "duration": 120,
+          "duration": 1270,
           "video": "https://placehold.co/1920x1080.mp4?text=Exploratory%20Data%20Analysis"
         },
         {
           "id": 404,
           "title": "Data Visualization with Matplotlib",
-          "duration": 90,
+          "duration": 1293,
           "video": "https://placehold.co/1920x1080.mp4?text=Data%20Visualization%20with%20Matplotlib"
         },
         {
           "id": 405,
           "title": "Introduction to NumPy",
-          "duration": 120,
+          "duration": 1960,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20NumPy"
         }
       ]
@@ -170,37 +170,37 @@
       "description": "Get started with Java programming, covering basic syntax, object-oriented principles, and exception handling.",
       "category": "Programming Fundamentals",
       "categoryId": 1,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=Java%20Programming\n%20for%20Beginners",
+      "thumbnail": "https://images.pexels.com/photos/1181275/pexels-photo-1181275.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=Java%20Programming\n%20for%20Beginners",
       "lectures": [
         {
           "id": 501,
           "title": "Introduction to Java",
-          "duration": 60,
+          "duration": 1107,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Java"
         },
         {
           "id": 502,
           "title": "Variables and Data Types",
-          "duration": 90,
+          "duration": 1855,
           "video": "https://placehold.co/1920x1080.mp4?text=Variables%20and%20Data%20Types"
         },
         {
           "id": 503,
           "title": "Object-Oriented Programming",
-          "duration": 120,
+          "duration": 1464,
           "video": "https://placehold.co/1920x1080.mp4?text=Object-Oriented%20Programming"
         },
         {
           "id": 504,
           "title": "Exception Handling",
-          "duration": 90,
+          "duration": 621,
           "video": "https://placehold.co/1920x1080.mp4?text=Exception%20Handling"
         },
         {
           "id": 505,
           "title": "Collections in Java",
-          "duration": 120,
+          "duration": 1428,
           "video": "https://placehold.co/1920x1080.mp4?text=Collections%20in%20Java"
         }
       ]
@@ -211,37 +211,37 @@
       "description": "Explore server-side JavaScript development using Node.js, including building RESTful APIs.",
       "category": "Web Development",
       "categoryId": 2,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=Back-End%20Development\n%20with%20Node.js",
+      "thumbnail": "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=Back-End%20Development\n%20with%20Node.js",
       "lectures": [
         {
           "id": 601,
           "title": "Introduction to Node.js",
-          "duration": 60,
+          "duration": 1187,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Node.js"
         },
         {
           "id": 602,
           "title": "Creating a Simple Server",
-          "duration": 90,
+          "duration": 1130,
           "video": "https://placehold.co/1920x1080.mp4?text=Creating%20a%20Simple%20Server"
         },
         {
           "id": 603,
           "title": "Express.js Framework",
-          "duration": 120,
+          "duration": 1833,
           "video": "https://placehold.co/1920x1080.mp4?text=Express.js%20Framework"
         },
         {
           "id": 604,
           "title": "RESTful API Design",
-          "duration": 90,
+          "duration": 1930,
           "video": "https://placehold.co/1920x1080.mp4?text=RESTful%20API%20Design"
         },
         {
           "id": 605,
           "title": "Middleware and Routing",
-          "duration": 120,
+          "duration": 643,
           "video": "https://placehold.co/1920x1080.mp4?text=Middleware%20and%20Routing"
         }
       ]
@@ -252,37 +252,37 @@
       "description": "An introduction to machine learning concepts and algorithms using the scikit-learn library in Python.",
       "category": "Data Science",
       "categoryId": 3,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=Machine%20Learning%20Fundamentals\n%20with%20scikit-learn",
+      "thumbnail": "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=Machine%20Learning%20Fundamentals\n%20with%20scikit-learn",
       "lectures": [
         {
           "id": 701,
           "title": "Introduction to Machine Learning",
-          "duration": 60,
+          "duration": 1779,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Machine%20Learning"
         },
         {
           "id": 702,
           "title": "Supervised Learning Algorithms",
-          "duration": 90,
+          "duration": 1501,
           "video": "https://placehold.co/1920x1080.mp4?text=Supervised%20Learning%20Algorithms"
         },
         {
           "id": 703,
           "title": "Unsupervised Learning",
-          "duration": 120,
+          "duration": 989,
           "video": "https://placehold.co/1920x1080.mp4?text=Unsupervised%20Learning"
         },
         {
           "id": 704,
           "title": "Model Evaluation and Hyperparameter Tuning",
-          "duration": 90,
+          "duration": 1852,
           "video": "https://placehold.co/1920x1080.mp4?text=Model%20Evaluation%20and%20Hyperparameter%20Tuning"
         },
         {
           "id": 705,
           "title": "Introduction to Neural Networks",
-          "duration": 120,
+          "duration": 806,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Neural%20Networks"
         }
       ]
@@ -293,37 +293,37 @@
       "description": "Learn to build cross-platform mobile applications using React Native and JavaScript.",
       "category": "Mobile App Development",
       "categoryId": 4,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=Mobile%20App%20Development\n%20with%20React%20Native",
+      "thumbnail": "https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=Mobile%20App%20Development\n%20with%20React%20Native",
       "lectures": [
         {
           "id": 801,
           "title": "Introduction to React Native",
-          "duration": 60,
+          "duration": 1112,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20React%20Native"
         },
         {
           "id": 802,
           "title": "Building UI Components",
-          "duration": 90,
+          "duration": 1878,
           "video": "https://placehold.co/1920x1080.mp4?text=Building%20UI%20Components"
         },
         {
           "id": 803,
           "title": "Navigation and State Management",
-          "duration": 120,
+          "duration": 1462,
           "video": "https://placehold.co/1920x1080.mp4?text=Navigation%20and%20State%20Management"
         },
         {
           "id": 804,
           "title": "Working with APIs",
-          "duration": 90,
+          "duration": 1781,
           "video": "https://placehold.co/1920x1080.mp4?text=Working%20with%20APIs"
         },
         {
           "id": 805,
           "title": "Deployment and Testing",
-          "duration": 120,
+          "duration": 1363,
           "video": "https://placehold.co/1920x1080.mp4?text=Deployment%20and%20Testing"
         }
       ]
@@ -334,37 +334,37 @@
       "description": "Build dynamic web applications using the Django framework and Python, covering models, views, and templates.",
       "category": "Web Development",
       "categoryId": 2,
-      "thumbnail": "https://placehold.co/600x400.jpg?text=Python%20Django\n%20Web%20Development",
+      "thumbnail": "https://images.pexels.com/photos/6804581/pexels-photo-6804581.jpeg?auto=compress&cs=tinysrgb&w=800",
       "video": "https://placehold.co/1920x1080.mp4?text=Python%20Django\n%20Web%20Development",
       "lectures": [
         {
           "id": 901,
           "title": "Introduction to Django",
-          "duration": 60,
+          "duration": 1958,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Django"
         },
         {
           "id": 902,
           "title": "Models and Database Queries",
-          "duration": 90,
+          "duration": 574,
           "video": "https://placehold.co/1920x1080.mp4?text=Models%20and%20Database%20Queries"
         },
         {
           "id": 903,
           "title": "Views and Templates",
-          "duration": 120,
+          "duration": 939,
           "video": "https://placehold.co/1920x1080.mp4?text=Views%20and%20Templates"
         },
         {
           "id": 904,
           "title": "Forms and User Authentication",
-          "duration": 90,
+          "duration": 1034,
           "video": "https://placehold.co/1920x1080.mp4?text=Forms%20and%20User%20Authentication"
         },
         {
           "id": 905,
           "title": "RESTful APIs with Django Rest Framework",
-          "duration": 120,
+          "duration": 1508,
           "video": "https://placehold.co/1920x1080.mp4?text=RESTful%20APIs%20with%20Django%20Rest%20Framework"
         }
       ]

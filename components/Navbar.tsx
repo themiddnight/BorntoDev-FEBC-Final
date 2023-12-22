@@ -15,17 +15,12 @@ export default function MainNavbar() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" className="bg-black/50 backdrop-blur-xl shadow-lg">
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" className="dark:bg-black/50 backdrop-blur-xl shadow-lg">
 
       <NavbarContent justify="start">
-
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
         <Link href="/">
           <NavbarBrand className="grow-0 me-5">
-            <TerminalIcon className="me-2 text-lime-400" />
+            <TerminalIcon className="me-2 dark:text-lime-400 light:text-lime-800" />
             <p className="font-bold font-mono text-rose-500">FINALE_PROJECT</p>
           </NavbarBrand>
         </Link>
@@ -39,12 +34,16 @@ export default function MainNavbar() {
             </NavbarItem>
           ))}
         </NavbarContent>
-
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <SearchBox />
       </NavbarContent>
+
+      <NavbarMenuToggle
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        className="sm:hidden"
+      />
 
       <NavbarMenu>
         {menuItems.map((item, index) => (

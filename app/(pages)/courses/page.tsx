@@ -1,22 +1,17 @@
 // Courses Page
 import React from 'react'
 
+import { fetchCourses } from '@/utils/fetching'
+
 import CoursesList from '@/components/CoursesList'
 
-async function fetchCourses() {
-  const res = await fetch('https://febc-final-project-api--pathompongthiti.repl.co/courses', { cache: 'no-store' })
-  if (!res.ok) return null
-  return res.json()
+
+export const metadata = {
+  title: "Courses - Ake's FEBC Finale Project",
+  description: "Pathompong's Final Project for FEBC",
 }
 
 export default async function Courses() {
   const courses = await fetchCourses()
-
-  if (!courses) return null
-
-  return (
-    <>
-      <CoursesList coursesList={courses} selectedCategory='All' />
-    </>
-  )
+  return <CoursesList coursesList={courses} selectedCategory='All' />
 }

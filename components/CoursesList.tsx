@@ -1,11 +1,13 @@
 import React from 'react'
 
+import { fetchCategories } from '@/utils/fetching'
+
 import CourseCard from '@/components/CourseCard'
 import FilterBox from '@/components/FilterBox'
 import Typewrite from './Typewrite'
 
 interface Props {
-	coursesList: Course[]
+	coursesList: Array<Course>
 	selectedCategory: string
 }
 
@@ -18,21 +20,14 @@ interface Course {
 	thumbnail: string
 }
 
-// Fetch categories from API to use in FilterBox
-async function fetchCategories() {
-	const res = await fetch('https://febc-final-project-api--pathompongthiti.repl.co/categories', { cache: 'no-store' })
-	if (!res.ok) throw new Error(res.statusText)
-	return res.json()
-}
-
 export default async function CoursesList({ coursesList, selectedCategory }: Props) {
 	const categories = await fetchCategories()
 	const categoryTitle = selectedCategory.replaceAll(' ', '_').toUpperCase()
 
 	return (
 		<>
-			<p className='font-sans text-white/50'>Our developer courses:</p>
-			<Typewrite texts={[categoryTitle]} className='text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono py-5 text-amber-300' />
+			<p className='font-sans mb-3 dark:text-white/50 light:text-black/50'>Our developer courses:</p>
+			<Typewrite texts={[categoryTitle]} startText='> ' className='text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono mb-8 dark:text-amber-300 light:text-amber-300' />
 			<FilterBox list={categories} selectedKey={selectedCategory} />
 			<div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{coursesList.map((course) => (
