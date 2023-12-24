@@ -13,14 +13,14 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <header className="flex flex-col lg:flex-row">
-        <Card className='flex basis-full lg:basis-2/3 h-[400px] shadow-lg'>
+      <header className="flex flex-col lg:flex-row lg:items-center gap-10">
+        <Card className='flex lg:basis-2/3 h-[250px] sm:h-[400px] shadow-lg'>
           <div className="flex p-5 gap-2">
             <CircleIcon fontSize="small" className='text-red-500' />
             <CircleIcon fontSize="small" className='text-amber-500' />
             <CircleIcon fontSize="small" className='text-green-500' />
           </div>
-          <div className="p-10">
+          <div className="p-5 sm:p-10">
             <p className='font-sans mb-3 dark:text-white/50 light:text-black/50 mb-5'>Welcome to our developer online course!</p>
             <Typewrite
               texts={[
@@ -30,7 +30,7 @@ export default function Home() {
               loop 
               pretype={300}
               startText="> "
-              className='text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono mb-8 dark:text-amber-300 light:text-amber-300'
+              className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono mb-8 dark:text-amber-300 light:text-amber-300'
             />
           </div>
         </Card>

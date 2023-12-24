@@ -18,7 +18,7 @@ export default function LecturesList({ lectures }: Props) {
 	return (
 		<>
 			<h2 className='text-xl mb-5'>Lectures:</h2>
-			<Listbox>
+			<Listbox label='Lectures'>
 				{lectures.map((lecture) => (
 					<ListboxItem
 						key={lecture.id}

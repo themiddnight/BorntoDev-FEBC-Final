@@ -36,7 +36,7 @@ export default function MainNavbar() {
         </NavbarContent>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="end">
+      <NavbarContent className="hidden sm:flex" justify="end">
         <SearchBox />
       </NavbarContent>
 

@@ -27,7 +27,7 @@ export default async function CoursesList({ coursesList, selectedCategory }: Pro
 	return (
 		<>
 			<p className='font-sans mb-3 dark:text-white/50 light:text-black/50'>Our developer courses:</p>
-			<Typewrite texts={[categoryTitle]} startText='> ' className='text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono mb-8 dark:text-amber-300 light:text-amber-300' />
+			<Typewrite texts={[categoryTitle]} startText='> ' className='text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-mono mb-10 dark:text-amber-300 light:text-amber-300' />
 			<FilterBox list={categories} selectedKey={selectedCategory} />
 			<div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{coursesList.map((course) => (

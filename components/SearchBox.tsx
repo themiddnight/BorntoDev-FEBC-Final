@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export default function SearchBox() {
     return (
-        <div className="flex flex-1 justify-end gap-1 ms-4">
+        <div className="flex flex-1 justify-end gap-1 gap-0 sm:ms-4">
             <Input
                 classNames={{
                     base: "max-w-full sm:max-w-[18rem] h-10",
