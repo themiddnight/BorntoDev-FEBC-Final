@@ -11,30 +11,35 @@
       "lectures": [
         {
           "id": 101,
+          "course_id": 1,
           "title": "Getting Started with Python",
           "duration": 533,
           "video": "https://placehold.co/1920x1080.mp4?text=Getting%20Started%20with%20Python"
         },
         {
           "id": 102,
+          "course_id": 1,
           "title": "Variables and Data Types",
           "duration": 510,
           "video": "https://placehold.co/1920x1080.mp4?text=Variables%20and%20Data%20Types"
         },
         {
           "id": 103,
+          "course_id": 1,
           "title": "Control Flow and Loops",
           "duration": 1812,
           "video": "https://placehold.co/1920x1080.mp4?text=Control%20Flow%20and%20Loops"
         },
         {
           "id": 104,
+          "course_id": 1,
           "title": "Functions and Modules",
           "duration": 803,
           "video": "https://placehold.co/1920x1080.mp4?text=Functions%20and%20Modules"
         },
         {
           "id": 105,
+          "course_id": 1,
           "title": "Working with Lists and Dictionaries",
           "duration": 990,
           "video": "https://placehold.co/1920x1080.mp4?text=Working%20with%20Lists%20and%20Dictionaries"
@@ -52,30 +57,35 @@
       "lectures": [
         {
           "id": 201,
+          "course_id": 2,
           "title": "Introduction to HTML",
           "duration": 1578,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20HTML"
         },
         {
           "id": 202,
+          "course_id": 2,
           "title": "HTML5 and Semantic Elements",
           "duration": 974,
           "video": "https://placehold.co/1920x1080.mp4?text=HTML5%20and%20Semantic%20Elements"
         },
         {
           "id": 203,
+          "course_id": 2,
           "title": "Styling with CSS",
           "duration": 1386,
           "video": "https://placehold.co/1920x1080.mp4?text=Styling%20with%20CSS"
         },
         {
           "id": 204,
+          "course_id": 2,
           "title": "CSS Layouts and Flexbox",
           "duration": 1310,
           "video": "https://placehold.co/1920x1080.mp4?text=CSS%20Layouts%20and%20Flexbox"
         },
         {
           "id": 205,
+          "course_id": 2,
           "title": "Responsive Design",
           "duration": 956,
           "video": "https://placehold.co/1920x1080.mp4?text=Responsive%20Design"
@@ -93,30 +103,35 @@
       "lectures": [
         {
           "id": 301,
+          "course_id": 3,
           "title": "Introduction to JavaScript",
           "duration": 1732,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20JavaScript"
         },
         {
           "id": 302,
+          "course_id": 3,
           "title": "DOM Manipulation",
           "duration": 1845,
           "video": "https://placehold.co/1920x1080.mp4?text=DOM%20Manipulation"
         },
         {
           "id": 303,
+          "course_id": 3,
           "title": "Event Handling",
           "duration": 895,
           "video": "https://placehold.co/1920x1080.mp4?text=Event%20Handling"
         },
         {
           "id": 304,
+          "course_id": 3,
           "title": "Asynchronous JavaScript",
           "duration": 1470,
           "video": "https://placehold.co/1920x1080.mp4?text=Asynchronous%20JavaScript"
         },
         {
           "id": 305,
+          "course_id": 3,
           "title": "Introduction to jQuery",
           "duration": 1314,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20jQuery"
@@ -134,30 +149,35 @@
       "lectures": [
         {
           "id": 401,
+          "course_id": 4,
           "title": "Introduction to Data Science",
           "duration": 1475,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Data%20Science"
         },
         {
           "id": 402,
+          "course_id": 4,
           "title": "Data Cleaning with Pandas",
           "duration": 924,
           "video": "https://placehold.co/1920x1080.mp4?text=Data%20Cleaning%20with%20Pandas"
         },
         {
           "id": 403,
+          "course_id": 4,
           "title": "Exploratory Data Analysis",
           "duration": 1270,
           "video": "https://placehold.co/1920x1080.mp4?text=Exploratory%20Data%20Analysis"
         },
         {
           "id": 404,
+          "course_id": 4,
           "title": "Data Visualization with Matplotlib",
           "duration": 1293,
           "video": "https://placehold.co/1920x1080.mp4?text=Data%20Visualization%20with%20Matplotlib"
         },
         {
           "id": 405,
+          "course_id": 4,
           "title": "Introduction to NumPy",
           "duration": 1960,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20NumPy"
@@ -175,30 +195,35 @@
       "lectures": [
         {
           "id": 501,
+          "course_id": 5,
           "title": "Introduction to Java",
           "duration": 1107,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Java"
         },
         {
           "id": 502,
+          "course_id": 5,
           "title": "Variables and Data Types",
           "duration": 1855,
           "video": "https://placehold.co/1920x1080.mp4?text=Variables%20and%20Data%20Types"
         },
         {
           "id": 503,
+          "course_id": 5,
           "title": "Object-Oriented Programming",
           "duration": 1464,
           "video": "https://placehold.co/1920x1080.mp4?text=Object-Oriented%20Programming"
         },
         {
           "id": 504,
+          "course_id": 5,
           "title": "Exception Handling",
           "duration": 621,
           "video": "https://placehold.co/1920x1080.mp4?text=Exception%20Handling"
         },
         {
           "id": 505,
+          "course_id": 5,
           "title": "Collections in Java",
           "duration": 1428,
           "video": "https://placehold.co/1920x1080.mp4?text=Collections%20in%20Java"
@@ -216,30 +241,35 @@
       "lectures": [
         {
           "id": 601,
+          "course_id": 6,
           "title": "Introduction to Node.js",
           "duration": 1187,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Node.js"
         },
         {
           "id": 602,
+          "course_id": 6,
           "title": "Creating a Simple Server",
           "duration": 1130,
           "video": "https://placehold.co/1920x1080.mp4?text=Creating%20a%20Simple%20Server"
         },
         {
           "id": 603,
+          "course_id": 6,
           "title": "Express.js Framework",
           "duration": 1833,
           "video": "https://placehold.co/1920x1080.mp4?text=Express.js%20Framework"
         },
         {
           "id": 604,
+          "course_id": 6,
           "title": "RESTful API Design",
           "duration": 1930,
           "video": "https://placehold.co/1920x1080.mp4?text=RESTful%20API%20Design"
         },
         {
           "id": 605,
+          "course_id": 6,
           "title": "Middleware and Routing",
           "duration": 643,
           "video": "https://placehold.co/1920x1080.mp4?text=Middleware%20and%20Routing"
@@ -257,30 +287,35 @@
       "lectures": [
         {
           "id": 701,
+          "course_id": 7,
           "title": "Introduction to Machine Learning",
           "duration": 1779,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Machine%20Learning"
         },
         {
           "id": 702,
+          "course_id": 7,
           "title": "Supervised Learning Algorithms",
           "duration": 1501,
           "video": "https://placehold.co/1920x1080.mp4?text=Supervised%20Learning%20Algorithms"
         },
         {
           "id": 703,
+          "course_id": 7,
           "title": "Unsupervised Learning",
           "duration": 989,
           "video": "https://placehold.co/1920x1080.mp4?text=Unsupervised%20Learning"
         },
         {
           "id": 704,
+          "course_id": 7,
           "title": "Model Evaluation and Hyperparameter Tuning",
           "duration": 1852,
           "video": "https://placehold.co/1920x1080.mp4?text=Model%20Evaluation%20and%20Hyperparameter%20Tuning"
         },
         {
           "id": 705,
+          "course_id": 7,
           "title": "Introduction to Neural Networks",
           "duration": 806,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Neural%20Networks"
@@ -298,30 +333,35 @@
       "lectures": [
         {
           "id": 801,
+          "course_id": 8,
           "title": "Introduction to React Native",
           "duration": 1112,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20React%20Native"
         },
         {
           "id": 802,
+          "course_id": 8,
           "title": "Building UI Components",
           "duration": 1878,
           "video": "https://placehold.co/1920x1080.mp4?text=Building%20UI%20Components"
         },
         {
           "id": 803,
+          "course_id": 8,
           "title": "Navigation and State Management",
           "duration": 1462,
           "video": "https://placehold.co/1920x1080.mp4?text=Navigation%20and%20State%20Management"
         },
         {
           "id": 804,
+          "course_id": 8,
           "title": "Working with APIs",
           "duration": 1781,
           "video": "https://placehold.co/1920x1080.mp4?text=Working%20with%20APIs"
         },
         {
           "id": 805,
+          "course_id": 8,
           "title": "Deployment and Testing",
           "duration": 1363,
           "video": "https://placehold.co/1920x1080.mp4?text=Deployment%20and%20Testing"
@@ -339,30 +379,35 @@
       "lectures": [
         {
           "id": 901,
+          "course_id": 9,
           "title": "Introduction to Django",
           "duration": 1958,
           "video": "https://placehold.co/1920x1080.mp4?text=Introduction%20to%20Django"
         },
         {
           "id": 902,
+          "course_id": 9,
           "title": "Models and Database Queries",
           "duration": 574,
           "video": "https://placehold.co/1920x1080.mp4?text=Models%20and%20Database%20Queries"
         },
         {
           "id": 903,
+          "course_id": 9,
           "title": "Views and Templates",
           "duration": 939,
           "video": "https://placehold.co/1920x1080.mp4?text=Views%20and%20Templates"
         },
         {
           "id": 904,
+          "course_id": 9,
           "title": "Forms and User Authentication",
           "duration": 1034,
           "video": "https://placehold.co/1920x1080.mp4?text=Forms%20and%20User%20Authentication"
         },
         {
           "id": 905,
+          "course_id": 9,
           "title": "RESTful APIs with Django Rest Framework",
           "duration": 1508,
           "video": "https://placehold.co/1920x1080.mp4?text=RESTful%20APIs%20with%20Django%20Rest%20Framework"

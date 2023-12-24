@@ -1,5 +1,4 @@
 // Lesson Page
-import React from 'react'
 import type { Metadata, ResolvingMetadata } from 'next'
 
 import { fetchLectures, fetchCourseDetail } from '@/utils/fetching'
