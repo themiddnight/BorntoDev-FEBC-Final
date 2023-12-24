@@ -36,7 +36,7 @@ export default function Home() {
         </Card>
         <div className="basis-full lg:basis-1/3 p-5">
           <div className="flex flex-col gap-5 justify-center">
-            <h1 className="text-3xl">Master Software Development: Learn, Code, Excel!</h1>
+            <h1 className="text-3xl font-bold">Master Software Development: Learn, Code, Excel!</h1>
             <p>Unlock Your Potential with Our Comprehensive Online Software Development Courses.</p>
             <p>A concise paragraph introducing your online course platform and its mission.</p>
           </div>

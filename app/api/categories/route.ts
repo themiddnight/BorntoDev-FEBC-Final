@@ -1,8 +1,10 @@
 // categories route
-import data from '@/data/data.json'
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
+
 export async function GET(request: Request) {
-    const categoriesSet = new Set(data.courses.map((course) => course.category));
-    const categories = Array.from(categoriesSet);
+    const categories = await prisma.categories.findMany();
+    await prisma.$disconnect();
     if (categories) {
         return Response.json(categories);
     } else {

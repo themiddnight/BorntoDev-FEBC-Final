@@ -3,6 +3,16 @@
 import React from "react";
 import { Select, SelectItem } from "@nextui-org/select";
 
+interface Props {
+  list: Array<Category>,
+  selectedKey: string
+}
+
+interface Category {
+  id: number,
+  title: string
+}
+
 function redirect(category: string) {
   if (category === 'All') {
     window.location.href = '/courses';
@@ -11,24 +21,22 @@ function redirect(category: string) {
   }
 }
 
-export default function FilterBox({ list, selectedKey }: { list: string[], selectedKey: string }) {
-  list.sort()
-  var categories = ['All', ...list]
+export default function FilterBox({ list, selectedKey }: Props) {
+  var categories = [{id: 0, title: 'All'}, ...list]
 
   return (
     <div className="flex gap-2 mb-7">
       <Select
         label="Category"
         labelPlacement="outside"
-        isMultiline={true}
         placeholder="All"
         className="w-full sm:w-80 shadow-lg"
         selectedKeys={[selectedKey]}
         onChange={(e) => redirect(e.target.value)}
       >
-        {categories.map((category: string) => (
-          <SelectItem key={category}>
-            {category}
+        {categories.map((category: Category) => (
+          <SelectItem key={category.title}>
+            {category.title}
           </SelectItem>
         ))}
       </Select>

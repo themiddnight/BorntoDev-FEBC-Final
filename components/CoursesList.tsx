@@ -17,7 +17,7 @@ interface Course {
 	description: string
 	category: string
 	categoryId: number
-	thumbnail: string
+	thumbnail_url: string
 }
 
 export default async function CoursesList({ coursesList, selectedCategory }: Props) {
@@ -38,7 +38,7 @@ export default async function CoursesList({ coursesList, selectedCategory }: Pro
 						description={course.description}
 						category={course.category}
 						categoryId={course.categoryId}
-						thumbnail={course.thumbnail}
+						thumbnail={course.thumbnail_url}
 					/>
 				))}
 			</div>

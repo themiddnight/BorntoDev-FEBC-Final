@@ -18,12 +18,14 @@ model categories {
 }
 
 model courses {
-  id          Int        @id @default(autoincrement())
-  title       String
-  description String
-  category_id Int
-  category    categories @relation(fields: [category_id], references: [id])
-  lectures    lectures[]
+  id            Int        @id @default(autoincrement())
+  title         String
+  description   String
+  category_id   Int
+  thumbnail_url String
+  video_url     String
+  category      categories @relation(fields: [category_id], references: [id])
+  lectures      lectures[]
 
   @@index([category_id])
 }
