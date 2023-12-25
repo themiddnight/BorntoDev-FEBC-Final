@@ -1,7 +1,7 @@
 // Course Page
 import React from 'react'
 import type { Metadata, ResolvingMetadata } from 'next'
-import { Link, Divider } from '@nextui-org/react'
+import { Link, Divider, Image } from '@nextui-org/react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 import { fetchCourseDetail } from '@/utils/fetching';
@@ -36,7 +36,8 @@ export default async function Course(
             <Typewrite texts={[data.category.replaceAll(' ', '_')]} className={`text-secondary font-mono`} />
             <h1 className={`text-3xl text-primary font-bold my-5`}>{data.title}</h1>
           </div>
-          <video controls src={data.video_url} className='w-full'></video>
+          {/* <video controls src={data.video_url} className='w-full'></video> */}
+          <Image src={data.thumbnail_url} alt={data.title} className='rounded-lg shadow-lg' />
           <Link href={`/courses/${data.id}/lesson`} className='mx-auto'>Go to lesson <OpenInNewIcon className='ms-1' /></Link>
         </div>
         <div className='flex-1'>

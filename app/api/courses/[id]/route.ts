@@ -5,25 +5,9 @@ const prisma = new PrismaClient();
 export async function GET(request: Request, { params }: { params: { id: string } }) {
     const course = await prisma.courses.findUnique({
         where: { id: Number(params.id) },
-        select: {
-            id: true,
-            title: true,
-            description: true,
-            category_id: true,
-            video_url: true,
-            category: {
-                select: {
-                    title: true,
-                },
-            },
-            lectures: {
-                select: {
-                    id: true,
-                    title: true,
-                    duration: true,
-                    video_url: true,
-                },
-            },
+        include: {
+            category: true,
+            lectures: true,
         },
     });
     await prisma.$disconnect();

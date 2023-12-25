@@ -3,16 +3,17 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export async function GET(request: Request) {
-    const categories = await prisma.categories.findMany();
-    const courses = await prisma.courses.findMany();
-    const data = courses.map((course) => {
-        const category = categories.find((category) => category.id === course.category_id);
-        return {
-            ...course,
-            category: category ? category.title : null,
-        };
+    const courses = await prisma.courses.findMany({
+        include: {
+            category: {
+                select: {
+                    title: true,
+                },
+            }
+        },
     });
+    courses.forEach(course => course.category = course.category.title as any)
     await prisma.$disconnect();
-    
-    return Response.json(data)
+
+    return Response.json(courses)
 }

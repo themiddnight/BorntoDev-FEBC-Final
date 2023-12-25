@@ -4,23 +4,15 @@ const prisma = new PrismaClient();
 
 export async function GET(request: Request, { params }: { params: { category_url: string } }) {
     const coursesByCategory = await prisma.courses.findMany({
-        select: {
-            id: true,
-            title: true,
-            description: true,
-            thumbnail_url: true,
-            category: {
-                select: {
-                    title: true,
-                },
-            },
-        },
         where: {
             category: {
                 title: {
                     equals: params.category_url,
                 },
             },
+        },
+        include: {
+            category: true,
         },
     });
     await prisma.$disconnect();
