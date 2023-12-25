@@ -1,6 +1,6 @@
 // Lesson Page
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal } from 'react'
 import { Listbox, ListboxItem } from '@nextui-org/react'
 import CircleIcon from '@mui/icons-material/Circle';
 
@@ -9,7 +9,7 @@ import ReactPlayer from 'react-player'
 import PageSpinner from '@/components/PageSpinner'
 
 export default function Lesson({ id }: { id: string }) {
-	const [course, setLectures] = useState([])
+	const [course, setCourse] = useState<any>(null) // Initialize course state with 'any' type
 	const [isLoading, setIsLoading] = useState(true)
 	const [currentLecture, setCurrentLecture] = useState(0)
 	const [duration, setDuration] = useState(0)
@@ -19,7 +19,7 @@ export default function Lesson({ id }: { id: string }) {
 		fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/courses/${id}`)
 			.then(res => res.json())
 			.then(data => {
-				setLectures(data)
+				setCourse(data) // Update the course state with the fetched data
 				setIsLoading(false)
 			})
 	}, [id])
@@ -31,7 +31,6 @@ export default function Lesson({ id }: { id: string }) {
 		<div className='flex flex-col lg:flex-row gap-10'>
 			<div className='basis-3/4'>
 				<ReactPlayer
-					url={course.lectures[currentLecture].video_url}
 					controls={true}
 					onProgress={(state) => {
 						if (duration - state.playedSeconds < 5 && !isFinished) {
@@ -43,6 +42,7 @@ export default function Lesson({ id }: { id: string }) {
 					width={'100%'}
 					height={'auto'}
 					className=''
+					url={course.lectures[currentLecture].video_url} // Access the video_url property from the course state
 				/>
 
 				<p>Course: {course.title}</p>
@@ -51,7 +51,7 @@ export default function Lesson({ id }: { id: string }) {
 			</div>
 
 			<Listbox label='Lectures' className='basis-1/4'>
-				{course.lectures.map((lecture) => (
+				{course.lectures.map((lecture: { id: string | number; duration: number; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) => (
 					<ListboxItem
 						key={lecture.id}
 						startContent={<CircleIcon className='text-small' />}
