@@ -29,7 +29,7 @@ export default function Typewrite({
 	const [cursor, setCursor] = useState('')
 	const [isTyping, setIsTyping] = useState(true)
 
-	// Typewrite function
+	// Typewrite line
 	async function typewrite(text: string) {
 		return new Promise<void>(async (resolve) => {
 			setText('');
@@ -50,7 +50,7 @@ export default function Typewrite({
 		});
 	}
 
-	// Display typewrite
+	// Main typewrite
 	async function displayTypewrite() {
 		let i = 0;
 		while (i < texts.length) {
@@ -71,7 +71,7 @@ export default function Typewrite({
 			setCursor(cursorText)
 		} else {
 			const interval = setInterval(() => {
-				setCursor(prev => prev === cursorText ? ' ' : cursorText)
+				setCursor(prev => prev === cursorText ? "\u00A0" : cursorText)
 			}, 500)
 			return () => clearInterval(interval)
 		}
@@ -81,7 +81,5 @@ export default function Typewrite({
 		displayTypewrite();
 	}, [])
 
-	return (
-		<p className={className}>{startText + text + cursor}</p>
-	)
+	return <p className={className}>{startText + text + cursor}</p>
 }

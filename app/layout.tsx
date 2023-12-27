@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Providers>
           <MainNavbar />
-          <main className="container my-10 px-5">
+          <main className="container my-5 sm:my-10 px-5">
             {children}
           </main>
           <Footer />

@@ -9,6 +9,7 @@ import { fetchCourseDetail } from '@/utils/fetching';
 import LecturesList from '@/components/LecturesList'
 import NotFound from '@/components/NotFound';
 import Typewrite from '@/components/Typewrite';
+import PageBreadcrumbs from '@/components/PageBreadcrumbs';
 
 
 export async function generateMetadata(
@@ -25,18 +26,23 @@ export default async function Course(
   { params }: { params: { id: string } }
 ) {
   const data = await fetchCourseDetail(params.id)
+  const links = [
+    { href: '/', text: 'Home' },
+    { href: '/courses', text: 'Courses' },
+    { href: `/courses/${data.id}`, text: data.title },
+  ]
 
   if (data === null) return <NotFound />
 
   return (
-    <>
+    <div className='px-0 sm:px-10'>
+      <PageBreadcrumbs links={links} className='mb-7' />
       <div className='flex flex-col lg:flex-row-reverse gap-10'>
         <div className='flex-1 flex flex-col gap-5'>
           <div className='lg:hidden'>
             <Typewrite texts={[data.category.replaceAll(' ', '_')]} className={`text-secondary font-mono`} />
             <h1 className={`text-3xl text-primary font-bold my-5`}>{data.title}</h1>
           </div>
-          {/* <video controls src={data.video_url} className='w-full'></video> */}
           <Image src={data.thumbnail_url} alt={data.title} className='rounded-lg shadow-lg' />
           <Link href={`/courses/${data.id}/lesson`} className='mx-auto'>Go to lesson <OpenInNewIcon className='ms-1' /></Link>
         </div>
@@ -50,6 +56,6 @@ export default async function Course(
           <LecturesList lectures={data.lectures} />
         </div>
       </div>
-    </>
+    </div>
   )
 }

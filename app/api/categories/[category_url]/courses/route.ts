@@ -23,6 +23,6 @@ export async function GET(request: Request, { params }: { params: { category_url
         })
         return Response.json(coursesByCategory);
     } else {
-        return Response.json({ error: 'Category not found' }, { status: 404 });
+        return Response.json({ error: 'Category not found' }, { status: 404, statusText: 'Category not found' });
     }
 }

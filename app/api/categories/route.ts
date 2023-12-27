@@ -10,6 +10,6 @@ export async function GET(request: Request) {
         categories.sort((a, b) => a.title.localeCompare(b.title));
         return Response.json(categories);
     } else {
-        return Response.json({ error: 'Categories not found' }, { status: 404 });
+        return Response.json({ error: 'Categories not found' }, { status: 404, statusText: 'Categories not found' });
     }
 }

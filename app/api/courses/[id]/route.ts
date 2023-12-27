@@ -16,6 +16,6 @@ export async function GET(request: Request, { params }: { params: { id: string }
         course.category = course.category.title as any;
         return Response.json(course);
     } else {
-        return Response.json({ error: 'Course not found' }, { status: 404 });
+        return Response.json({ error: 'Course not found' }, { status: 404, statusText: 'Course not found' });
     }
 }
