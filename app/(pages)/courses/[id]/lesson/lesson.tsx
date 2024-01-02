@@ -64,7 +64,7 @@ export default function Lesson({ id }: { id: string }) {
 						onDuration={(state) => setDuration(state)}
 						width={'100%'}
 						height={'auto'}
-						className=''
+						className='shadow-lg'
 						url={course.lectures[currentLecture].video_url}
 					/>
 

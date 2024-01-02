@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Spinner } from '@nextui-org/react'
 
 export default function PageSpinner() {
   const [dotText, setDotText] = useState('')
@@ -18,8 +17,7 @@ export default function PageSpinner() {
 
   return (
     <div className='flex flex-col items-center justify-center py-36'>
-      {/* <Spinner color='primary' /> */}
-      <p className='text-lg font-bold font-mono text-amber-300 mt-5'>Loading{dotText}</p>
+      <p className='text-lg font-bold font-mono text-content2 mt-5'>Loading{dotText}</p>
     </div>
   )
 }

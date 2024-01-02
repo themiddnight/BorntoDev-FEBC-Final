@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark {
+    --body-bg: #101;
+    --body-bg-image: radial-gradient(ellipse at top, #302050 0%, #090011 90%);
+    --brand-icon: #fff;
+}
+
+.light {
+    --body-bg: #fff;
+    --body-bg-image: radial-gradient(ellipse at top, #f0e9fe 10%, #fff 90%);
+}
+
 body {
-    background-color: #101;
-    background-image: radial-gradient(ellipse at top, #302050 0%, #090011 90%);
+    background-color: var(--body-bg);
+    background-image: var(--body-bg-image);
     background-attachment: fixed;
-    min-height: 100vh;
+    min-height: 100dvh;
 }

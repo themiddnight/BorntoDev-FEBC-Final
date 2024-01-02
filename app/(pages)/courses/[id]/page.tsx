@@ -32,6 +32,11 @@ export default async function Course(
     { href: `/courses/${data.id}`, text: data.title },
   ]
 
+  const title = <>
+    <Typewrite texts={[data.category.replaceAll(' ', '_')]} className={`text-content3/75 font-mono`} />
+    <h1 className={`text-3xl text-primary font-bold my-5`}>{data.title}</h1>
+  </>
+
   if (data === null) return <NotFound />
 
   return (
@@ -40,16 +45,14 @@ export default async function Course(
       <div className='flex flex-col lg:flex-row-reverse gap-10'>
         <div className='flex-1 flex flex-col gap-5'>
           <div className='lg:hidden'>
-            <Typewrite texts={[data.category.replaceAll(' ', '_')]} className={`text-secondary font-mono`} />
-            <h1 className={`text-3xl text-primary font-bold my-5`}>{data.title}</h1>
+            {title}
           </div>
           <Image src={data.thumbnail_url} alt={data.title} className='rounded-lg shadow-lg' />
-          <Link href={`/courses/${data.id}/lesson`} className='mx-auto'>Go to lesson <OpenInNewIcon className='ms-1' /></Link>
+          <Link href={`/courses/${data.id}/lesson`} showAnchorIcon underline='hover' className='mx-auto'>Go to lesson</Link>
         </div>
         <div className='flex-1'>
           <div className='hidden lg:block'>
-            <Typewrite texts={[data.category.replaceAll(' ', '_')]} className={`text-secondary font-mono`} />
-            <h1 className={`text-3xl text-primary font-bold my-5`}>{data.title}</h1>
+            {title}
           </div>
           <p>{data.description}</p>
           <Divider className='my-7' />

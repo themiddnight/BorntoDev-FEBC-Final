@@ -11,6 +11,7 @@ export default function Footer() {
 						<p className='font-bold text-lg mb-2'>About</p>
 						<p className='text-sm'>This is a project for BorntoDev Front-End Bootcamp.</p>
 						<p className='text-sm'>Built with Next.js 14, TailwindCSS, NextUI and Prisma to connect to PlanetScale MySQL. Deployed on Vercel.</p>
+						<p className='text-sm font-bold my-1'>Thanks ChatGPT for the contents.</p>
 					</div>
 					<div className='flex flex-col gap'>
 						<p className='font-bold text-lg mb-2'>Contact</p>
@@ -21,7 +22,7 @@ export default function Footer() {
 								<a href='mailto:the.midnight.k.0173@gmail.com' className='dark:text-white/75 underline'>the.midnight.k.0173@gmail.com</a>
 							</div>
 							<div className='flex flex-col'>
-								<p className='text-sm'>My GitHub:</p>
+								<p className='text-sm'>GitHub:</p>
 								<a href='https://github.com/themiddnight' target='blank' className='dark:text-white/75 underline'>themiddnight</a>
 							</div>
 							<div className='flex flex-col'>
