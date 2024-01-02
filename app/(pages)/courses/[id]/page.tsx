@@ -34,7 +34,7 @@ export default async function Course(
 
   const title = <>
     <Typewrite texts={[data.category.replaceAll(' ', '_')]} className={`text-content3/75 font-mono`} />
-    <h1 className={`text-3xl text-primary font-bold my-5`}>{data.title}</h1>
+    <h1 className={`text-3xl text-primary font-mono font-bold my-5`}>{data.title}</h1>
   </>
 
   if (data === null) return <NotFound />
@@ -43,14 +43,14 @@ export default async function Course(
     <div className='px-0 sm:px-10'>
       <PageBreadcrumbs links={links} className='mb-7' />
       <div className='flex flex-col lg:flex-row-reverse gap-10'>
-        <div className='flex-1 flex flex-col gap-5'>
+        <div className='basis-1/2 xl:basis-2/5 flex flex-col gap-5'>
           <div className='lg:hidden'>
             {title}
           </div>
           <Image src={data.thumbnail_url} alt={data.title} className='rounded-lg shadow-lg' />
           <Link href={`/courses/${data.id}/lesson`} showAnchorIcon underline='hover' className='mx-auto'>Go to lesson</Link>
         </div>
-        <div className='flex-1'>
+        <div className='basis-1/2 xl:basis-3/5'>
           <div className='hidden lg:block'>
             {title}
           </div>

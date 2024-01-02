@@ -14,7 +14,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <header className="flex flex-col lg:flex-row lg:items-center gap-10">
+      <header className="flex flex-col lg:flex-row lg:items-center gap-10 mt-10">
         <Card className='flex lg:basis-2/3 h-[250px] sm:h-[400px] shadow-lg'>
           <div className="flex p-5 gap-2">
             <Circle fontSize="small" className='text-red-500' />
@@ -35,7 +35,7 @@ export default function Home() {
             />
           </div>
         </Card>
-        <div className="flex flex-col basis-full lg:basis-1/3 p-5">
+        <div className="flex flex-col content-center basis-full lg:basis-1/3 p-5">
           <div className="flex flex-col gap-5 justify-center mb-5">
             <h1 className="text-3xl font-bold">Master Software Development: Learn, Code, Excel!</h1>
             <p>Unlock Your Potential with Our Comprehensive Online Software Development Courses.</p>
@@ -44,7 +44,7 @@ export default function Home() {
           <Button
             href="/courses"
             as={Link}
-            className="text-black bg-primary font-bold font-mono mt-5"
+            className="text-background bg-primary font-bold font-mono mt-5"
           >
             Explore Courses!
           </Button>
@@ -73,7 +73,7 @@ export default function Home() {
 
         <div>
           <h1 className="text-3xl font-bold mb-8 mt-10">Why Choose Us</h1>
-          <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex flex-col md:flex-row gap-5 lg:gap-10">
             <Card className='flex-1 gap-5 p-7 shadow-lg'>
               <CircleOutlined fontSize="medium" />
               <p>Experienced Instructors: Learn from industry professionals with years of hands-on experience.</p>

@@ -7,10 +7,14 @@ export default function PageSpinner() {
 
   let i = 0
   setInterval(() => {
-    setDotText(dotText + '.')
-    i++
-    if (i == 4) {
-      setDotText('')
+    if (i === 0) {
+      setDotText('.')
+      i++
+    } else if (i === 1) {
+      setDotText('..')
+      i++
+    } else if (i === 2) {
+      setDotText('...')
       i = 0
     }
   }, 500)

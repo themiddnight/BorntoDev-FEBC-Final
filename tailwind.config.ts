@@ -40,11 +40,11 @@ const config: Config = {
         colors: {
           foreground: '#111',
           background: '#fff',
-          primary: amber[900],
+          primary: purple[500],
           secondary: blue[700],
           content1: '#fff',
-          content2: amber[800],
-          content3: purple[500]
+          content2: purple[700],
+          content3: amber[900],
         }
       }
     }

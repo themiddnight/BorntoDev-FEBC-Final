@@ -16,7 +16,7 @@ export default function MainNavbar() {
 	];
 
 	return (
-		<Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" className="backdrop-blur-xl shadow-lg">
+		<Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" className="dark:bg-black/70 backdrop-blur-xl shadow-lg">
 
 			<NavbarContent justify="start">
 				<Link href="/">
