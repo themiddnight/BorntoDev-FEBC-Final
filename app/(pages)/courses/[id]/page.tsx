@@ -2,7 +2,6 @@
 import React from 'react'
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Link, Divider, Image } from '@nextui-org/react'
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 import { fetchCourseDetail } from '@/utils/fetching';
 

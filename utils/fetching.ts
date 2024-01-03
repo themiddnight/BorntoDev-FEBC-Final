@@ -24,11 +24,14 @@ export async function fetchCourseDetail(id: string) {
     return res.json()
 }
 
-// export function fetchLectures(id: string) {
-//     fetch(`${apiUrl}/api/courses/${id}`, { cache: 'no-store' })
-//         .then(res => res.json())
-//         .then(data => {
-//             return data.lectures
-//         })
-//         .catch(err => console.error(err))
-// }
+export async function fetchLectures() {
+    const res = await fetch(`${apiUrl}/api/lectures`, { cache: 'no-store' })
+    if (!res.ok) throw new Error(res.statusText)
+    return res.json()
+}
+
+export async function fetchCourseLectures(id: string) {
+    const res = await fetch(`${apiUrl}/api/courses/${id}`, { cache: 'no-store' })
+    if (!res.ok) throw new Error(res.statusText)
+    return res.json()
+}

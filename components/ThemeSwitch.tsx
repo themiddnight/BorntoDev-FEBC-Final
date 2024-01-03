@@ -36,7 +36,7 @@ export default function ThemeSwitch() {
                     }
                 }}
             >
-                {theme === 'light' ? <LightMode /> : <ModeNight />}
+                {theme === 'light' ? <ModeNight /> : <LightMode />}
             </Button>
         </div>
     )

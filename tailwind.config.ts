@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { nextui } from "@nextui-org/react"
-import { amber, blue, green, purple } from '@mui/material/colors'
+import { amber, blue, purple } from '@mui/material/colors'
 
 const config: Config = {
   content: [
@@ -46,7 +46,7 @@ const config: Config = {
           content2: purple[700],
           content3: amber[900],
         }
-      }
+      },
     }
   })],
 }

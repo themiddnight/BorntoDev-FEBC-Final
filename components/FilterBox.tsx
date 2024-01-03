@@ -33,12 +33,13 @@ export default function FilterBox({ list, selectedKey }: Props) {
         className="w-full sm:w-80 shadow-lg"
         selectedKeys={[selectedKey]}
         onChange={(e) => redirect(e.target.value)}
+        items={categories}
       >
-        {categories.map((category: Category) => (
-          <SelectItem key={category.title}>
+        {(category) => (
+          <SelectItem key={category.title} value={category.title}>
             {category.title}
           </SelectItem>
-        ))}
+        )}
       </Select>
     </div>
   );

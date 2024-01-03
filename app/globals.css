@@ -5,12 +5,17 @@
 .dark {
     --body-bg: #101;
     --body-bg-image: radial-gradient(ellipse at top, #302050 0%, #090011 90%);
-    --brand-icon: #fff;
 }
 
 .light {
     --body-bg: #fff;
     --body-bg-image: radial-gradient(ellipse at top, #eee 10%, #ddd 90%);
+}
+
+.admin {
+    --body-bg: #eee;
+    --body-bg-image: #eee;
+    color: #111;
 }
 
 body {

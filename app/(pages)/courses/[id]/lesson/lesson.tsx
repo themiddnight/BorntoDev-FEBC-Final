@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { Button, Listbox, ListboxItem } from '@nextui-org/react'
 import { CheckCircle, CircleOutlined } from '@mui/icons-material';
 
+import { fetchCourseLectures } from '@/utils/fetching';
+
 import NotFound from '@/components/NotFound'
 import ReactPlayer from 'react-player'
 import PageSpinner from '@/components/PageSpinner'
@@ -65,12 +67,10 @@ export default function Lesson({ id }: { id: string }) {
 
 	// load course from API and set it to state
 	useEffect(() => {
-		fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/courses/${id}`)
-			.then(res => res.json())
-			.then(data => {
-				setCourse(data)
-				setIsLoading(false)
-			})
+		fetchCourseLectures(id).then((data) => {
+			setCourse(data)
+			setIsLoading(false)
+		})
 	}, [id])
 
 	useEffect(() => {
@@ -118,7 +118,7 @@ export default function Lesson({ id }: { id: string }) {
 							<ListboxItem
 								key={lecture.id}
 								startContent={learntArray.find((item: Learnt) => item.id === lecture.id)?.learnt ? <CheckCircle /> : <CircleOutlined />}
-								description={<p className={currentLecture?.id === lecture.id ? 'text-background/50' : 'text-white/50'}>
+								description={<p className={currentLecture?.id === lecture.id ? 'text-background/50' : 'text-foreground/50'}>
 									{Math.floor(lecture.duration / 60)}:{String(lecture.duration % 60).padStart(2, '0')}
 									{Math.floor(lecture.duration / 60) == 1 ? ' minute' : ' minutes'}</p>
 								}
@@ -133,7 +133,7 @@ export default function Lesson({ id }: { id: string }) {
 							</ListboxItem>
 						))}
 					</Listbox>
-					<Button variant='light' className='text-secondary underline underline-offset-2' onClick={clearLearned}>Clear learned marks</Button>
+					<Button variant='light' className='text-danger underline underline-offset-2' onClick={clearLearned}>Clear learned marks</Button>
 				</div>
 			</div>
 		</>
