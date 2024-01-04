@@ -3,11 +3,11 @@
 import { useState, useEffect } from 'react'
 import { Button, Listbox, ListboxItem } from '@nextui-org/react'
 import { CheckCircle, CircleOutlined } from '@mui/icons-material';
+import ReactPlayer from 'react-player'
 
 import { fetchCourseLectures } from '@/utils/fetching';
 
 import NotFound from '@/components/NotFound'
-import ReactPlayer from 'react-player'
 import PageSpinner from '@/components/PageSpinner'
 import PageBreadcrumbs from '@/components/PageBreadcrumbs';
 
@@ -83,7 +83,7 @@ export default function Lesson({ id }: { id: string }) {
 		setLearntArray(learntArray)
 	}, [])
 
-	const title = <h1 className='text-3xl text-primary font-mono font-bold my-5'>Lesson: {currentLecture?.title}</h1>
+	const title = <h1 className='text-2xl sm:text-3xl text-primary font-mono font-bold my-5'>Lesson: {currentLecture?.title}</h1>
 
 	if (isLoading) return <PageSpinner />
 	if (!course) return <NotFound />
@@ -125,6 +125,7 @@ export default function Lesson({ id }: { id: string }) {
 								onClick={() => {
 									setIsFinished(false)
 									setCurrentLecture(lecture)
+									window.scrollTo({ top: 0, behavior: 'smooth' })
 								}}
 								showDivider
 								className={currentLecture?.id === lecture.id ? 'bg-primary text-background' : ''}
