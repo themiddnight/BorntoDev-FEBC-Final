@@ -1,7 +1,7 @@
 // admin page
 'use client'
 import { useState, useRef } from 'react'
-import { Button } from '@nextui-org/react'
+import { Button, Input } from '@nextui-org/react'
 
 import CategoriesTable from '@/components/admin/CategoriesTable';
 import CoursesTable from '@/components/admin/CoursesTable';
@@ -29,42 +29,42 @@ export default function AdminPage() {
 		}
 	}
 
-	// if (!isLoggedIn) {
-	// 	return (
-	// 		<div className='flex flex-col gap-5 max-w-md items-center align-middle mx-auto pt-48'>
-	// 			<h1 className='text-4xl font-bold text-primary text-center mb-8'>Admin Login</h1>
-	// 			<Input
-	// 				name='username'
-	// 				placeholder="Username"
-	// 				className='shadow-md'
-	// 				ref={usernameRef}
-	// 				onInput={(e) => {
-	// 					setUsername((e.target as HTMLInputElement).value)
-	// 				}}
-	// 				value={username}
-	// 				onKeyDown={(e) => { if (e.key === 'Enter') checkLogin() }}
-	// 			/>
-	// 			<Input
-	// 				name='password'
-	// 				type='password'
-	// 				placeholder="Password"
-	// 				className='shadow-md'
-	// 				onInput={(e) => {
-	// 					setPassword((e.target as HTMLInputElement).value)
-	// 				}}
-	// 				value={password}
-	// 				onKeyDown={(e) => { if (e.key === 'Enter') checkLogin() }}
-	// 			/>
-	// 			<Button
-	// 				className='w-1/2 mt-10 shadow-lg text-background'
-	// 				color='primary'
-	// 				onClick={() => checkLogin()}
-	// 			>
-	// 				Log in
-	// 			</Button>
-	// 		</div>
-	// 	)
-	// }
+	if (!isLoggedIn) {
+		return (
+			<div className='flex flex-col gap-5 max-w-md items-center align-middle mx-auto pt-48'>
+				<h1 className='text-4xl font-bold text-primary text-center mb-8'>Admin Login</h1>
+				<Input
+					name='username'
+					placeholder="Username"
+					className='shadow-md'
+					ref={usernameRef}
+					onInput={(e) => {
+						setUsername((e.target as HTMLInputElement).value)
+					}}
+					value={username}
+					onKeyDown={(e) => { if (e.key === 'Enter') checkLogin() }}
+				/>
+				<Input
+					name='password'
+					type='password'
+					placeholder="Password"
+					className='shadow-md'
+					onInput={(e) => {
+						setPassword((e.target as HTMLInputElement).value)
+					}}
+					value={password}
+					onKeyDown={(e) => { if (e.key === 'Enter') checkLogin() }}
+				/>
+				<Button
+					className='w-1/2 mt-10 shadow-lg text-background'
+					color='primary'
+					onClick={() => checkLogin()}
+				>
+					Log in
+				</Button>
+			</div>
+		)
+	}
 
 	return (
 		<>

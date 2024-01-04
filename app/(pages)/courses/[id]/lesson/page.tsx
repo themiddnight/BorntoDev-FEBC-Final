@@ -11,8 +11,23 @@ export async function generateMetadata(
 ): Promise<Metadata | ResolvingMetadata> {
   const data = await fetchCourseDetail(params.id)
   return {
-    title: `${data.title} lecture - Ake's FEBC Finale Project`,
+    title: `${data.title} lectures - Ake's FEBC Finale Project`,
     description: data.description,
+    openGraph: {
+      type: 'website',
+      locale: 'th_TH',
+      url: 'https://ake-febc-final.vercel.app/',
+      title: `${data.title} lectures - Ake's FEBC Finale Project`,
+      description: data.description,
+      images: [
+        {
+          url: data.thumbnail_url,
+          width: 1200,
+          height: 630,
+          alt: 'Og Image Alt',
+        },
+      ],
+    },
   }
 }
 
