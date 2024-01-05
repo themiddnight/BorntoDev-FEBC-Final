@@ -6,6 +6,12 @@ export async function fetchCourses() {
     return res.json()
 }
 
+export async function fetchCoursesByCondition(key: string, value: string) {
+    const res = await fetch(`${apiUrl}/api/courses?${key}=${value}`, { cache: 'no-store' })
+    if (!res.ok) throw new Error(res.statusText)
+    return res.json()
+}
+
 export async function fetchCategories() {
     const res = await fetch(`${apiUrl}/api/categories`, { cache: 'no-store' })
     if (!res.ok) throw new Error(res.statusText)

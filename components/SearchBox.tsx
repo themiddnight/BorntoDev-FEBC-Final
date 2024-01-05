@@ -7,7 +7,7 @@ export default function SearchBox() {
 
     function handleSearch() {
         if (searchInput.current) {
-            window.location.href = `/courses/search?search=${searchInput.current.value}`
+            window.location.href = `/courses/?course_name=${searchInput.current.value}`
         }
     }
     

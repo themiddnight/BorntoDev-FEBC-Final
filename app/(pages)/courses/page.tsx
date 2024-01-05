@@ -1,9 +1,14 @@
 // Courses Page
 import React from 'react'
 
-import { fetchCourses } from '@/utils/fetching'
+import { fetchCourses, fetchCoursesByCondition } from '@/utils/fetching'
 
 import CoursesList from '@/components/CoursesList'
+
+interface Props {
+  params: {}
+  searchParams: { [key: string]: string | string[] | undefined }
+}
 
 export const metadata = {
   title: "Courses - Ake's FEBC Finale Project",
@@ -24,7 +29,13 @@ export const metadata = {
   },
 }
 
-export default async function Courses() {
+export default async function Courses(props: Props) {
+  const searchParams = props.searchParams;
+  const search = searchParams['course_name'];
+  if (search) {
+    const courses = await fetchCoursesByCondition('course_name', search.toString())
+    return <CoursesList title={search.toString()} coursesList={courses} selectedCategory='All' />
+  }
   const courses = await fetchCourses()
   return <CoursesList coursesList={courses} selectedCategory='All' />
 }

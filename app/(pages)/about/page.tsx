@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 // About Page
 import { Metadata, ResolvingMetadata } from 'next'
-import React from 'react'
+import { ArrowDownwardOutlined } from '@mui/icons-material'
 
 export async function generateMetadata(
   { params }: { params: { id: string } }
@@ -28,9 +29,10 @@ export async function generateMetadata(
 export default function About() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-5 py-48">
-        <h1 className="text-3xl font-bold">About</h1>
-        <p className="text-center">This is my final project for FEBC</p>
+      <div className="flex flex-col items-center justify-center gap-5 py-32">
+        <h1 className="font-center text-3xl font-bold">About</h1>
+        <p className="text-center">This is my final project for FEBC. Please see the details in the footer below.</p>
+          <ArrowDownwardOutlined fontSize='large' className='font-center mt-10 animate-bounce' />
       </div>
     </>
   )

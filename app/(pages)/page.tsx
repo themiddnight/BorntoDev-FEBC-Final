@@ -4,7 +4,10 @@
 import { Link, Button, Card, Divider, Image } from "@nextui-org/react"
 import { Circle, CircleOutlined } from '@mui/icons-material';
 
+import { fetchCategories } from "@/utils/fetching";
+
 import Typewrite from "@/components/Typewrite"
+import Carousel from "@/components/Carousel"
 
 export const metadata = {
   title: "Ake's FEBC Finale Project",
@@ -25,7 +28,14 @@ export const metadata = {
   },
 }
 
-export default function Home() {
+export default async function Home() {
+  const categories = await fetchCategories()
+  const categoriesWithLink = categories.map((category: {id:number, title:string, href:string}) => {
+    return {
+      ...category,
+      href: `/courses/category/${category.title}`,
+    }
+  })
   return (
     <>
       <header className="flex flex-col lg:flex-row lg:items-center gap-10 mt-10">
@@ -66,6 +76,8 @@ export default function Home() {
       </header>
 
       <Divider className='my-10' />
+      <Carousel data={categoriesWithLink} />
+      <Divider className='my-10' />
 
       <article className="sm:px-10">
         <div className="flex flex-col items-center md:flex-row gap-10">
@@ -79,6 +91,7 @@ export default function Home() {
               src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress"
               alt="About Us"
               width={'auto'}
+              shadow='md'
             />
           </div>
         </div>

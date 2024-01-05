@@ -16,6 +16,8 @@
     "@nextui-org/react": "^2.2.9",
     "@prisma/client": "^5.7.1",
     "@react-stately/data": "^3.11.0",
+    "embla-carousel-autoplay": "^8.0.0-rc18",
+    "embla-carousel-react": "^8.0.0-rc18",
     "framer-motion": "^10.16.16",
     "mysql2": "^3.6.2",
     "next": "14.0.4",
