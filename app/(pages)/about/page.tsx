@@ -10,8 +10,7 @@ export async function generateMetadata(
     description: 'About this project',
     openGraph: {
       type: 'website',
-      locale: 'th_TH',
-      url: 'https://ake-febc-final.vercel.app/',
+      url: '${process.env.NEXT_PUBLIC_DOMAIN}/about',
       title: `About - Ake's FEBC Finale Project`,
       description: 'About this project',
       images: [
@@ -29,9 +28,9 @@ export async function generateMetadata(
 export default function About() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-5 py-48">
         <h1 className="text-3xl font-bold">About</h1>
-        <p className="text-center py-48">This is my final project for FEBC</p>
+        <p className="text-center">This is my final project for FEBC</p>
       </div>
     </>
   )

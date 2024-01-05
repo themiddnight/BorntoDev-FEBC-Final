@@ -1,4 +1,4 @@
-// Lesson Page
+// Lesson Component
 'use client'
 import { useState, useEffect } from 'react'
 import { Button, Listbox, ListboxItem } from '@nextui-org/react'

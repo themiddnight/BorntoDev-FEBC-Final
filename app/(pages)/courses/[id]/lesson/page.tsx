@@ -15,8 +15,7 @@ export async function generateMetadata(
     description: data.description,
     openGraph: {
       type: 'website',
-      locale: 'th_TH',
-      url: 'https://ake-febc-final.vercel.app/',
+      url: `${process.env.NEXT_PUBLIC_DOMAIN}/courses/${data.id}/lesson`,
       title: `${data.title} lectures - Ake's FEBC Finale Project`,
       description: data.description,
       images: [

@@ -10,8 +10,7 @@ export const metadata = {
   description: "Pathompong's Final Project for FEBC",
   openGraph: {
     type: 'website',
-    locale: 'th_TH',
-    url: 'https://ake-febc-final.vercel.app/',
+    url: `${process.env.NEXT_PUBLIC_DOMAIN}/courses`,
     title: "Courses - Ake's FEBC Finale Project",
     description: "Pathompong's Final Project for FEBC",
     images: [

@@ -13,8 +13,7 @@ export async function generateMetadata(props: Props) {
         description: `Search results of ${search}`,
         openGraph: {
             type: 'website',
-            locale: 'th_TH',
-            url: 'https://ake-febc-final.vercel.app/',
+            url: `${process.env.NEXT_PUBLIC_DOMAIN}/courses/search?search=${search}`,
             title: `Search: ${search} - Ake's FEBC Finale Project`,
             description: `Search results of ${search}`,
             images: [
