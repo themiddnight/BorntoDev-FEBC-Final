@@ -10,7 +10,7 @@ export default function Footer() {
 					<div className='flex flex-col gap'>
 						<p className='font-bold text-lg mb-2'>About</p>
 						<p className='text-sm'>This is a project for BorntoDev Front-End Bootcamp.</p>
-						<p className='text-sm'>Built with Next.js 14, TailwindCSS, NextUI and Prisma to connect to Supabase PostgreSQL. Deployed on Vercel.</p>
+						<p className='text-sm'>Built with Next.js 14, TailwindCSS, NextUI and Prisma to connect to Vercel PostgreSQL database. Deployed on Vercel.</p>
 						<p className='text-sm my-1'>Uses placehold.co for video placeholders and ChatGPT for the contents.</p>
 					</div>
 					<div className='flex flex-col gap'>
